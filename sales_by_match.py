@@ -15,7 +15,6 @@ import sys
 #  2. INTEGER_ARRAY ar
 #
 
-
 def sockMerchant(n, ar):
     # Write your code here
     dicty = {}
