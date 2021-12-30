@@ -10,3 +10,5 @@ So this is a start of my computer scinece career and here is the to do list I ha
 - [ ] Interview Preparation Kit
 - [ ] Problem Solving
 - [ ] Python
+
+Note: Python was my very first language and I'm very comfortable using it, that's why you'll see the most of material in this language. Even though, I use C and Java in university so I'll probably write some problems (even same problems) in this languages to get used to their syntax.
