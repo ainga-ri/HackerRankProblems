@@ -46,9 +46,26 @@ def repeatedStringBetter(s, n):
     return num_max_value
   
   """
-  This goes HackerRank function
+  This goes HackerRank function, works only for 'a' char
   """
+
   def repeatedString(s, n):
+    # Write your code here
+    num_max_value_s = 0 # number of times the max value is in a string
+    
+    for i in range(len(s)):
+        if (s[i] == 'a'):
+            num_max_value_s += 1
+            
+    num_max_value = n // len(s) * num_max_value_s
+    
+    if (n % len(s) != 0):
+        rest = n % len(s)
+        for i in range(0, rest):
+            if (s[i] == 'a'):
+                num_max_value += 1
+            
+    return num_max_value
     
 if __name__ == '__main__':  
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
