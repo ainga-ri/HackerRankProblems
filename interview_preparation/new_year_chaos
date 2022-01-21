@@ -19,15 +19,17 @@ def minimumBribes(q):
     result = ""
     while (result != "Too chaotic" and it != len(q)-1):
         if (q[it] > q[it+1]):
+            bribe = q[it]
             q[it], q[it+1] = q[it+1], q[it]
-            if it in repeated:
-                repeated[it] += 1
-                if (repeated[it] == 3):
+            if bribe in repeated:
+                repeated[bribe] += 1
+                if (repeated[bribe] == 3):
                     result = "Too chaotic"
             else:
-                repeated[it] = 1
+                repeated[bribe] = 1
             it = 0
-        it += 1
+        else:
+            it += 1
     if (result != "Too chaotic"):
         result = sum(repeated.values())
     return print(result)
