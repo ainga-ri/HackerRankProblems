@@ -17,16 +17,27 @@ public class ArrayList {
             String[] val = scan.nextLine().split(" ");
             List<String> values = new ArrayList<String>();
             values = Arrays.asList(val);
-            System.out.println(values);
             for (int col  = 1; col <= Integer.parseInt(values.get(0)); col++)
-            {
                 twoDim.get(row).add(Integer.parseInt(values.get(col)));
-            }
             
         }
-        System.out.println(twoDim);
+        int queries = Integer.parseInt(scan.nextLine());
+        for (int k = 0; k < queries; k++)
+        {
+            String[] pair = scan.nextLine().split(" ");
+            List<String> pairList = new ArrayList<String>();
+            pairList = Arrays.asList(pair);
+            try
+            {
+                System.out.println(twoDim.get(Integer.parseInt(pairList.get(0))-1).get(Integer.parseInt(pairList.get(1))-1));
+            } catch (IndexOutOfBoundsException e)
+            {
+                System.out.println("ERROR!");
+            }
+        }
+
         scan.close();
         
-    }
+    } 
 }
 
